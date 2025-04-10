@@ -64,3 +64,14 @@ func (a *Account) AddBalance(amount float64) {
 ```
 
 Para acessar o banco de dados, na `domain/repository.go`
+
+`
+$ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+$ migrate -database "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable" -path migrations up
+`
+
+
+RUN 
+
+$ go mod tidy
+$ go run cmd/app/main.go

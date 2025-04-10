@@ -10,6 +10,8 @@ import (
 	"github.com/devfullcycle/imersao2022/go-gateway/internal/service"
 	"github.com/devfullcycle/imersao2022/go-gateway/internal/web/server"
 	"github.com/joho/godotenv"
+
+	_ "github.com/lib/pq"
 )
 
 func getEnv(key, defaultValue string) string {
@@ -43,7 +45,7 @@ func main() {
 	accountRepository := repository.NewAccountRepository(db)
 	accountService := service.NewAccountService(accountRepository)
 
-	port := getEnv("PORT", "8080")
+	port := getEnv("HTTP_PORT", "8000")
 	svr := server.NewServer(accountService, port)
 	svr.ConfigureRoutes()
 	svr.Start()
