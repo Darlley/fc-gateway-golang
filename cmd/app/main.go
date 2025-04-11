@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/Darlley/fc-gateway-golang/internal/repository"
-	"github.com/Darlley/fc-gateway-golang/internal/service"
-	"github.com/Darlley/fc-gateway-golang/internal/web/server"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/repository"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/web/server"
 	"github.com/joho/godotenv"
 
 	_ "github.com/lib/pq"

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/Darlley/fc-gateway-golang/internal/dto"
-	"github.com/Darlley/fc-gateway-golang/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/dto"
 )
 
 type AccountService struct {
@@ -62,7 +62,7 @@ func (s *AccountService) FindByAPIKey(apiKey string) (*dto.AccountOutput, error)
 
 	output := dto.FromAccount(account)
 	return &output, nil
-}	
+}
 
 func (s *AccountService) FindByID(id string) (*dto.AccountOutput, error) {
 	account, err := s.repository.FindByID(id)

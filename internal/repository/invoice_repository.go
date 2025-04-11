@@ -3,7 +3,7 @@ package repository
 import (
 	"database/sql"
 
-	"github.com/Darlley/fc-gateway-golang/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
 )
 
 type InvoiceRepository struct {

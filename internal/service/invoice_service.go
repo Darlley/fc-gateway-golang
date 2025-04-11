@@ -1,11 +1,6 @@
 package service
 
-import (
-	"context"
-
-	"github.com/Darlley/fc-gateway-golang/internal/domain"
-	"github.com/Darlley/fc-gateway-golang/internal/dto"
-)
+import "github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
 
 type InvoiceService struct {
 	invoiceRepository domain.InvoiceRepository
