@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/dto"
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/dto"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
 )
 
 type AccountHandler struct {
@@ -27,7 +27,6 @@ func (h *AccountHandler) Create(w http.ResponseWriter, r *http.Request) {
 	}
 
 	output, err := h.accountService.CreateAccount(input)
-
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

@@ -3,7 +3,7 @@ package dto
 import (
 	"time"
 
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
 )
 
 type CreateAccountInput struct {

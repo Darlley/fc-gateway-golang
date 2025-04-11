@@ -67,7 +67,7 @@ Para acessar o banco de dados, na `domain/repository.go`
 
 `
 $ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
-$ migrate -database "postgresql://postgres:postgres@localhost:5432/postgres?sslmode=disable" -path migrations up
+$ migrate -database "postgresql://postgres:postgres@localhost:5432/fullcycle-gateway?sslmode=disable" -path migrations up
 `
 
 

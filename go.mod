@@ -1,4 +1,4 @@
-module github.com/devfullcycle/imersao2022/go-gateway
+module github.com/Darlley/fc-gateway-golang
 
 go 1.24.2
 

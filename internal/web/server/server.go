@@ -3,8 +3,8 @@ package server
 import (
 	"net/http"
 
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/service"
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/web/handlers"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/web/handlers"
 	"github.com/go-chi/chi/v5"
 )
 

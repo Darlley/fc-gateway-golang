@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/repository"
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/service"
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/web/server"
+	"github.com/Darlley/fc-gateway-golang/internal/repository"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/web/server"
 	"github.com/joho/godotenv"
 
 	_ "github.com/lib/pq"
@@ -32,7 +32,7 @@ func main() {
 		getEnv("DB_PORT", "5432"),
 		getEnv("DB_USER", "postgres"),
 		getEnv("DB_PASSWORD", "postgres"),
-		getEnv("DB_NAME", "postgres"),
+		getEnv("DB_NAME", "fullcycle-gateway"),
 		getEnv("DB_SSLMODE", "disable"),
 	)
 

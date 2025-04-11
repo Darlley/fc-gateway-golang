@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/domain"
-	"github.com/devfullcycle/imersao2022/go-gateway/internal/dto"
+	"github.com/Darlley/fc-gateway-golang/internal/dto"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
 )
 
 type AccountService struct {
