@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/Darlley/fc-gateway-golang/internal/repository"
-	"github.com/Darlley/fc-gateway-golang/internal/service"
-	"github.com/Darlley/fc-gateway-golang/internal/web/server"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/repository"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/web/server"
 	"github.com/joho/godotenv"
 
 	_ "github.com/lib/pq"
@@ -45,8 +45,11 @@ func main() {
 	accountRepository := repository.NewAccountRepository(db)
 	accountService := service.NewAccountService(accountRepository)
 
+	invoiceRepository := repository.NewInvoiceRepository(db)
+	invoiceService := service.NewInvoiceService(invoiceRepository, *accountService)
+
 	port := getEnv("HTTP_PORT", "8000")
-	svr := server.NewServer(accountService, port)
+	svr := server.NewServer(accountService, invoiceService, port)
 	svr.ConfigureRoutes()
 	svr.Start()
 

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Darlley/fc-gateway-golang/internal/dto"
-	"github.com/Darlley/fc-gateway-golang/internal/service"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/dto"
+	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
 )
 
 type AccountHandler struct {
