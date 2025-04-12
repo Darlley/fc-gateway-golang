@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/dto"
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/internal/dto"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
 	"github.com/go-chi/chi/v5"
 )
 
@@ -30,7 +30,7 @@ func (h *InvoiceHandler) Create(w http.ResponseWriter, r *http.Request) {
 
 	input.APIKey = r.Header.Get("X-API-Key")
 	output, err := h.service.Create(input)
-	
+
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -43,7 +43,7 @@ func (h *InvoiceHandler) Create(w http.ResponseWriter, r *http.Request) {
 
 func (h *InvoiceHandler) GetByID(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
-	
+
 	if id == "" {
 		http.Error(w, "ID is required", http.StatusBadRequest)
 		return

@@ -3,9 +3,9 @@ package server
 import (
 	"net/http"
 
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/web/handlers"
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/web/middleware"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/web/handlers"
+	"github.com/Darlley/fc-gateway-golang/internal/web/middleware"
 	"github.com/go-chi/chi/v5"
 )
 
@@ -34,7 +34,7 @@ func (s *Server) ConfigureRoutes() {
 	s.router.Post("/accounts", accountHandler.Create)
 	s.router.Get("/accounts", accountHandler.Get)
 
-	s.router.Group(func(r chi.Router){
+	s.router.Group(func(r chi.Router) {
 		r.Use(authMiddleware.Authenticate)
 		s.router.Post("/invoice", invoiceHandler.Create)
 		s.router.Get("/invoice/{id}", invoiceHandler.GetByID)

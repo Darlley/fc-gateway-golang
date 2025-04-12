@@ -3,8 +3,8 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/service"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/internal/service"
 )
 
 type AuthMiddleware struct {
@@ -31,7 +31,7 @@ func (m *AuthMiddleware) Authenticate(next http.Handler) http.Handler {
 				http.Error(w, "invalid API key", http.StatusUnauthorized)
 				return
 			}
-			
+
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}

@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
 )
 
 // AccountRepository implementa operações de persistência para Account

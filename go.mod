@@ -1,4 +1,4 @@
-module github.com/Darlley/fc-gateway-golang/blob/develop
+module github.com/Darlley/fc-gateway-golang
 
 go 1.24.2
 

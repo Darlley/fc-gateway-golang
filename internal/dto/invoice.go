@@ -3,7 +3,7 @@ package dto
 import (
 	"time"
 
-	"github.com/Darlley/fc-gateway-golang/blob/develop/internal/domain"
+	"github.com/Darlley/fc-gateway-golang/internal/domain"
 )
 
 const (
